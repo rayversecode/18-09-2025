@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML basics 1</title>
+</head>
+<body>
+
+
+
+
+
+<header>
+    <table width="90%" align="center" bgcolor="lightblue">
+            <td>
+                <center><h1>WEB DEVELOPMENT COURSE</h1>
+                <p>by Coder Army</p></center>
+            </td>
+    </table>
+    <hr />
+
+
+    <br />
+    <hr />
+    <table width="90%" align="center" bgcolor="pink">
+            <td>
+                <center><h2>HTML: Hyper Text Markup Language</h2></center>
+            </td>
+    </table>
+    <br />
+</header>
+
+
+
+
+
+
+
+
+<main>
+  <table width="90%" align="center" bgcolor="lavender">
+    <tr>
+      <td>
+        <h2>What is HTML?</h2>
+        <p><b>HTML</b> stands for <b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage. It is the standard language used to create and structure the content of a webpage.</p>
+        <ul>
+          <li><b>HyperText:</b> This refers to the ability to create links that connect web pages to one another, making the web a connected "web" of information.</li>
+          <li><b>Markup Language:</b> This means you use "tags" to surround your content, giving that content meaning and structure. You are "marking up" a plain text document.</li>
+        </ul>
+        <p><b>First Website:</b> <a href="https://info.cern.ch/hypertext/WWW/TheProject.html">https://info.cern.ch/hypertext/WWW/TheProject.html</a></p>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="mistyrose">
+    <tr>
+        <td>
+            <h2>Install Required Software</h2>
+            <h3>1. Install Visual Studio Code</h3>
+            <p>This is a free piece of software from Microsoft that you will use to write your code.</p>
+            <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+            <h3>2. Install Visual Studio Code Extensions</h3>
+            <ul>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">Live Preview</a></li>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a></li>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&utm_source=chatgpt.com">Live Server</a></li>
+            </ul>
+         </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="lightcyan">
+    <tr>
+        <td>
+            <h3>1. The Heading Tag (&lt;h1&gt; to &lt;h6&gt;)</h3>
+            <p><b>What it is:</b> Headings are tags used to define titles and subtitles on your page. They are crucial for creating a logical hierarchy and outline for your content.</p>
+            <p><b>The Tag:</b> &lt;h1&gt;</p>
+            <ul>
+                <li><font size="6"><b>Heading1</b></font></li>
+                <li><font size="5"><b>Heading2</b></font></li>
+                <li><font size="4"><b>Heading3</b></font></li>
+                <li><font size="3"><b>Heading4</b></font></li>
+                <li><font size="2"><b>Heading5</b></font></li>
+                <li><font size="1"><b>Heading6</b></font></li>
+                
+            </ul>
+            <ul>
+                <li>&lt;h1&gt;: The most important heading, typically used only once per page for the main title.</li>
+                <li>&lt;h2&gt;: A major section heading.</li>
+                <li>&lt;h3&gt;: A sub-section heading under an &lt;h2&gt;.</li>
+                <li>...and so on, down to &lt;h6&gt;, the least important heading.</li>
+            </ul>
+            <p><b>The Purpose:</b> To structure your document in a way that is understandable to both humans and machines (like search engines and screen readers). It is <b>not</b> just for making text big; it is for giving the text structural importance.</p>
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="lightsteelblue">
+    <tr>
+        <td>
+            <h3>2. The Paragraph Tag (&lt;p&gt;)</h3>
+
+            <p><b>What it is:</b> The paragraph tag is the most common tag you'll use. It's for grouping sentences and blocks of text together.</p>
+
+            <p><b>The Tag:</b> &lt;p&gt;</p>
+
+            <p><b>The Purpose:</b> To define a distinct paragraph of text. Browsers automatically add a little bit of space before and after a &lt;p&gt; element, separating it from other content.</p>
+            <p>&lt;p&gt; This is the first paragraph. It contains several sentences about a topic.&lt;/p&gt;</p>
+            <p>&lt;p&gt;This is a second, separate paragraph. The browser will display it with a space between it and the first one.&lt;/p&gt;</p>
+        
+        
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="wheat">
+    <tr>
+        <td>
+            <h3>3. HTML Horizontal Rules</h3>
+
+            <p><b>What it is:</b> The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+
+            <p><b>The Tag:</b> &lt;hr /&gt;</p>
+
+            <p>&lt;p&gt;This is the first topic.&lt;/p&gt;</p>
+            <p>&lt;hr /&gt;</p>
+            <p>&lt;p&gt;This is a completely different topic.&lt;/p&gt;</p>
+
+            <p><b>Result:</b></p>
+            <p>This is the first topic.</p>
+            <hr />
+            <p>his is a completely different topic.</p>
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="lightpink">
+    <tr>
+        <td>
+            <h3>4. The Line Break Tag: &lt;br&gt;</h3>
+
+            <p><b>What it is:</b> This tag tells the browser, "Stop writing on this line and immediately start on the next one." It's like hitting the Enter key once in a poem or an address.</p>
+
+            <p><b>The Tag:</b> &lt;br /&gt;</p>
+
+            <p><b>Purpose:</b> Creates a single line break. It's like hitting Enter once in a poem or address.</p>
+
+            <p>&lt;p&gt;221B Baker Street&lt;br&gt;London, England&lt;/p&gt;</p>    
+
+            <p><b>Result:</b></p>
+            <p>221B Baker Street <br />London, England/p>    
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="honeydew">
+    <tr>
+        <td>
+            <h3>5. List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h3>
+            <p><b>What it is:</b> These tags are used to create lists. This is a perfect example of nesting.</p>
+            <p><b>The Tags:</b></p>
+                <ul>
+                    <li>&lt;ul&gt;: Unordered List</li>
+                    <li>&lt;ol&gt;: Ordered List</li>
+                    <li>&lt;li&gt;: List Item</li>
+                </ul>
+        
+            <p><b>Purpose:</b>To group related items together in a list format.</p>
+            &lt;ul&gt;<br />
+            &lt;li&gt;Tea Bag&lt;/li&gt;<br />
+            &lt;li&gt;Water&lt;/li&gt;<br />
+            &lt;li&gt;Sugar&lt;/li&gt;<br />
+            &lt;li&gt;Milk&lt;/li&gt;<br />
+            &lt;/ul&gt;<br />
+
+            &lt;ol&gt;<br />
+            &lt;li&gt;First, boil the water in a kettle.&lt;/li&gt;<br />
+            &lt;li&gt;Add tea bag, sugar and milk into it&lt;/li&gt;<br />
+            &lt;li&gt;Keep boiling it for 5 minutes&lt;/li&gt;<br />
+            &lt;li&gt;Serve the tea by pouring it into cup&lt;/li&gt;<br />
+            &lt;/ol&gt;
+
+            <p><b>Result:</b></p>
+             <ul>
+                <li>Tea Bag</li>
+                <li>Water</li>
+                <li>Sugar</li>
+                <li>Milk</li>
+            </ul>
+
+
+            <ol>
+                <li>First, boil the water in a kettle.</li>
+                <li>Add tea bag, sugar and milk into it</li>
+                <li>Keep boiling it for 5 minutes </li>
+                <li>Serve the tea by pouring it into cup</li>
+            </ol>
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="aliceblue">
+    <tr>
+        <td>
+            <h3>6. The Anchor Tag (&lt;a&gt;)</h3>
+            <p><b>What it is:</b> The Anchor tag is what makes the web "hypertext." It is used to create a hyperlink to another webpage, file, or location within the same page.</p>
+            <p><b>The Tag:</b> &lt;a&gt;</p>
+            <p><b>The Purpose:</b> To make text or an image clickable, allowing users to navigate.</p>
+       
+            &lt;a href="https://www.coderarmy.in/"&gt;Visit Coder Army&lt;/a&gt;
+            <p><b>Result:</b></p>
+            <a href="https://www.coderarmy.in/">Visit Coder Army</a>
+        
+            <h3>HTML Links - The target Attribute</h3>
+            <p>By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.</p>
+            <p>The target attribute specifies where to open the linked document.</p>
+            <p>The target attribute can have one of the following values:</p>
+            <ul>
+                <li>_self    Default. Opens in same tab.</li>
+                <li>_blank   Opens in new tab.</li>
+            </ul>
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  <table width="90%" align="center" bgcolor="beige">
+    <tr>
+        <td>
+            <h2>8. The Image Tag (&lt;img&gt;)</h2>
+            <p><b>What it is:</b> The Image tag is a self-closing tag used to embed an image onto your page.</p>
+            <p><b>The Tag:</b> &lt;img&gt;</p>
+            <p><b>The Purpose:</b> To display a visual image. It requires:</p>
+            <ul>
+                <li><b>src</b>: (source)Path or URL to the image.</li>
+                <li><b>alt</b>: (lternative text) A description of the image. This is vital for accessibility (screen readers for the visually impaired will read this out) and for when the image fails to load.</li>\
+            </ul>
+            <p>&lt;img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="300px" width="300px" alt="This is Dog Photo"&gt;</p>
+            <p><b>Result:</b></p>
+            <img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="200px" width="300px" alt="This is Dog Photo">
+
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+
+
+  
+
+</main>
+
+
+
+
+
+
+<iframe src="" allowfullscreen></iframe>
+<footer>
+   <table width="100%" bgcolor="pink">
+    <tr >
+        <td><a href="index.html"><font color="blue">HOME PAGE</font></a></td>
+        <td><a href="page1.html"><font color="blue">LECTURE1</font></a></td>
+        <td><a href="page2.html"><font color="blue">LECTURE2</font></a></td>
+        <td><a href="page3.html"><font color="blue">LECTURE3</font></a></td>
+        <td><a href="page4.html"><font color="blue">LECTURE4</font></a></td>
+        <td><a href="page5.html"><font color="blue">LECTURE5</font></a></td>
+        <td><a href="page6.html"><font color="blue">LECTURE6</font></a></td>
+    </tr>
+  </table>
+  <br />
+  
+  <table width="100%" bgcolor="lightblue">
+    <tr>
+      <td align="center">
+        <p>&copy; 2025 Web Development Course</p>
+      </td>
+    </tr>
+  </table>
+  <br />
+</footer>
+
+
+
+</body>
+</html>
