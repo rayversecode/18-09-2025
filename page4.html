@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML basics 3</title>
+</head>
+<body>
+
+
+
+
+
+<header>
+    <table width="90%" align="center" bgcolor="lightblue">
+            <td>
+                <center><h1>WEB DEVELOPMENT COURSE</h1>
+                <p>by Coder Army</p></center>
+            </td>
+    </table>
+    <hr />
+
+
+    <br />
+    <hr />
+    <table width="90%" align="center" bgcolor="pink">
+            <td>
+                <center><h2>File Path System</h2></center>
+            </td>
+    </table>
+    <br />
+</header>
+
+
+
+
+
+
+
+<main>
+
+ <table width="90%" align="center" bgcolor="lightsteelblue">
+    <tr>
+        <td>
+            <h2>File Path System</h2>
+
+            <h3>Step 1: The First Principle (The Fundamental Truth)</h3>
+            <p>
+            The most fundamental truth is this: <b>A website is not one single file.</b><br>
+            It's a collection of different files (HTML, CSS, JavaScript, images, videos, fonts) that all need to work together.
+            These files are organized into folders, just like documents on your computer.
+            </p>
+
+            <h3>Step 2: The Core Problem</h3>
+            <p>
+            If your index.html file needs to display an image named <b>logo.png</b>, how does the HTML file tell the browser where to <b>find</b> logo.png?<br>
+            The browser needs an exact, unambiguous address to locate the file. <b>A file path is that address.</b>
+            </p>
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+
+   <table width="90%" align="center" bgcolor="snow">
+    <tr>
+        <td>
+            <h3>A) Relative File Paths (Most Important)</h3>
+            <pre>
+            my-website/
+            ├── index.html
+            ├── about.html
+            │
+            ├── images/
+            │   ├── logo.png
+            │   └── hero.jpg
+            │
+            └── pages/
+                ├── contact.html
+                └── terms.html
+            </pre>
+        </td>
+    </tr>
+  </table>
+  <br />
+
+
+
+
+  <table width="90%" align="center" bgcolor="lavender">
+    <tr>
+        <td>
+            <h2>Scenario 1: Linking to a file in the SAME folder.</h2>
+
+                <ul>
+                    <li><b>The Problem:</b> You are in <code>index.html</code> and want to link to <code>about.html</code>.</li>
+                    <li><b>The Logic:</b> They are neighbors, living in the same <code>my-website/</code> folder. The directions are as simple as possible.</li>
+                    <li><b>The Syntax:</b> You just use the filename.</li>
+                </ul>
+
+            <h3>Example:</h3>
+    
+            <p> This code is inside index.html</p>
+            <p>&lt;a href="about.html"&gt;About Us&lt;/a&gt;</p>
+    
+        </td>
+    </tr>
+  </table>
+  <br />
+
+
+  <table width="90%" align="center" bgcolor="wheat">
+    <tr>
+        <td>
+            <h2>Scenario 2: Linking to a file in a SUB-FOLDER (Going Down).</h2>
+
+            <ul>
+                <li><b>The Problem:</b> You are in <code>index.html</code> and want to display <code>logo.png</code>.</li>
+                <li><b>The Logic:</b> From <code>index.html</code>, you need to go <i>into</i> the <code>images</code> folder to find the logo.</li>
+                <li><b>The Syntax:</b> You write the folder name, a forward slash <code>/</code>, and then the filename.codeHtml</li>
+            </ul>
+
+            <h3>Example:</h3>
+    
+            <p>&lt;!-- This code is inside index.html --&gt;</p>    
+            <p>&lt;img src="images/logo.png" alt="My Website Logo"&gt;</p>
+    
+        </td>
+        <td align="right">
+            <img src="filepath.png" alt="ss of file path" width="500">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+    <table width="90%" align="center" bgcolor="snow">
+        <tr>
+            <td>
+                <h2>Scenario 3: Linking to a file in a PARENT FOLDER (Going Up).</h2>
+
+                <ul>
+                    <li><b>The Problem:</b> You are in <i>contact.html</i> (which is inside <i>pages/</i>) and you want to display <i>logo.png</i> (which is inside <i>images/</i>).</li>
+                    <li><b>The Logic:</b> You can't go directly from <i>pages/</i> to <i>images/</i>. You must first go <i>up</i> one level out of the <i>pages</i> folder to get back to the main <i>my-website/</i> folder. From there, you can go <i>down</i> into the <i>images</i> folder.</li>
+                    <li><b>The Syntax:</b> Two dots and a slash (<i>../</i>) means "go up one level."codeHtml</li>
+                </ul>
+
+                <h3>Example:</h3>
+    
+                <p>&lt;!-- This code is inside pages/contact.html --&gt;</p>
+                <p>&lt;img src="../images/logo.png" alt="My Website Logo"&gt;</p>
+   
+
+                <ul>
+                    <li>../ takes you from pages up to <i>my-website</i>.</li>
+                    <li><i>images/logo.png</i> then takes you down into the <i>images</i> folder to find the file.</li>
+                </ul>
+            </td>
+        </tr>
+  </table>
+  <br />
+
+
+  <table width="90%" align="center" bgcolor="lightcyan">
+    <tr>
+        <td>
+            <h2>B) Absolute File Paths</h2>
+
+            <p>
+            An absolute file path gives the <b>full, complete URL</b> to a resource on the web.  
+            It starts with <i>http://</i> or <i>https://</i>.
+            </p>
+
+            <h3>When to use it:</h3>
+            <p>
+            You ONLY use absolute paths when you are linking to a resource that is 
+            <b>NOT on your own website</b>.
+            </p>
+
+            <ul>
+                <li>Linking to another website.</li>
+                <li>Using a font from Google Fonts.</li>
+                <li>Using an image from an image-hosting service.</li>
+            </ul>
+            <p>Example</p>
+            <h3>Linking to an external website:</h3>
+            &lt;!-- Linking to an external website --&gt;<br>
+            &lt;a href="https://www.google.com"&gt;Search on Google&lt;/a&gt;
+
+            <h3>Using an image hosted on another server:</h3>
+            &lt;!-- Using an image hosted on another server --&gt;<br>
+            &lt;img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Html5_logo_and_wordmark.svg" 
+            alt="HTML5 Logo"&gt;
+            <p><b>Result:</b></p>
+            <a href="https://www.google.com">Search on Google</a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Html5_logo_and_wordmark.svg" alt="HTML5 Logo">
+
+        </td>
+    </tr>
+  </table>
+  <br>
+
+
+  <table width="90%" align="center" bgcolor="lightsteelblue">
+    <tr>
+        <td>
+            <h3>The Critical "Why": Why not use absolute paths for your own files?</h3>
+
+            <p>
+                A beginner might be tempted to copy the full path from their computer, like this:
+            </p>
+
+            <p>
+            src="C:/Users/Arjun/Desktop/my-website/images/logo.png"
+            </p>
+
+            <p>
+                <b>This is a major mistake.</b> This address only works on <i>your</i> computer. 
+                The moment you upload your website to a real web server, that path becomes meaningless 
+                and the image will be broken.
+            </p>
+
+            <p>
+                Think of a web browser (like Chrome, Firefox, etc.) as a <b>secure prison</b> 
+                for the code it runs. This prison is called a <b>"sandbox."</b>
+            </p>
+
+            <ul>
+                <li><b>The Inmates:</b> The HTML, CSS, and JavaScript code you load.</li>
+                <li><b>The Prison Walls:</b> The browser itself.</li>
+            </ul>
+
+            <p>
+                The primary rule of this prison is: 
+                <b>Code running inside the sandbox is NOT allowed to freely access the host computer's file system.</b>
+            </p>
+
+        </td>
+    </tr>
+  </table>
+  <br />
+
+
+
+  <table width="90%" align="center" bgcolor="silver">
+    <tr>
+        <td>
+            <h3>Absolute Path in Windows</h3>
+
+            <p>The Windows file system is organized into separate drives, each identified by a letter (like <b>C:</b>, <b>D:</b>, etc.).</p>
+
+            <ul>
+                <li><b>Starting Point (The Root):</b> An absolute path in Windows <b>always starts with a drive letter</b> followed by a colon and a backslash, like <b>C:\</b>. This is the "root" of that specific drive.</li>
+                <li><b>Directory Separator:</b> Windows uses a <b>backslash (\)</b> to separate directories and files in the path.</li>
+            </ul>
+
+            <p><b>Windows Structure:</b></p>
+            <p>Drive:\Folder\SubFolder\file.txt</p>
+
+            <p><b>Example:</b></p>
+            <p>Imagine a file named <b>report.docx</b> located in the <b>Documents</b> folder of a user named <b>JohnDoe</b> on the main C: drive.</p>
+
+            <p>The absolute path would be:</p>
+            <p><b>C:\Users\JohnDoe\Documents\report.docx</b></p>
+
+            <ul>
+                <li>C:\ - Start at the root of the C drive.</li>
+                <li>Users - Go into the "Users" folder.</li>
+                <li>JohnDoe - Go into the "JohnDoe" folder.</li>
+                <li>Documents - Go into the "Documents" folder.</li>
+                <li>report.docx - Here is the file.</li>
+            </ul>
+        </td>
+    </tr>
+  </table>
+  <br />
+
+
+  <table width="90%" align="center" bgcolor="beige">
+    <tr>
+        <td>  
+
+            <h3>Absolute Path in macOS (and Linux)</h3>
+
+            <p>The macOS file system (like Linux and other Unix-like systems) does <b>not</b> use drive letters. Instead, it has a single, unified file system.</p>
+
+            <ul>
+                <li><b>Starting Point (The Root):</b> An absolute path in macOS <b>always starts with a single forward slash (/)</b>. This symbol represents the one and only root of the entire file system.</li>
+                <li><b>Directory Separator:</b> macOS uses a <b>forward slash (/)</b> to separate directories and files.</li>
+            </ul>
+
+            <p><b>macOS Structure:</b></p>
+            <p>/Folder/SubFolder/file.txt</p>
+
+            <p><b>Example:</b></p>
+            <p>Let's find the same file: <b>report.docx</b> in the <b>Documents</b> folder for the user <b>johndoe</b>.</p>
+
+            <p>The absolute path would be:</p>
+            <p><b>/Users/johndoe/Documents/report.docx</b></p>
+
+            <ul>
+                <li>/ - Start at the absolute root of the entire file system.</li>
+                <li>Users - Go into the "Users" directory.</li>
+                <li>johndoe - Go into the "johndoe" directory (usernames are typically lowercase on macOS/Linux).</li>
+                <li>Documents - Go into the "Documents" directory.</li>
+                <li>report.docx - Here is the file.</li>
+            </ul>
+
+
+
+           <h4>Summary of Key Differences</h4>
+
+            <table border="1">
+                <tr bgcolor="lightgray">
+                    <th>Feature</th>
+                    <th>Windows</th>
+                    <th>macOS / Linux</th>
+                </tr>
+                <tr>
+                    <td>Starting Point (Root)</td>
+                    <td>Drive Letter (e.g., C:\)</td>
+                    <td>A single forward slash (/)</td>
+                </tr>
+                <tr>
+                    <td>Directory Separator</td>
+                    <td>Backslash (\)</td>
+                    <td>Forward Slash (/)</td>
+                </tr>
+                <tr>
+                    <td>Example</td>
+                    <td>C:\Users\JohnDoe\Documents\report.docx</td>
+                    <td>/Users/johndoe/Documents/report.docx</td>
+                </tr>
+            </table>
+         </td>
+    </tr>
+  </table>
+  <br />
+
+
+
+ <table width="90%" align="center" bgcolor="aliceblue">
+    <tr>
+        <td>
+            <h3>HTML Boilerplate Code</h3>
+
+            <h4>Step 1: The First Principle (The Fundamental Truth)</h4>
+            <p>The fundamental truth is that a web browser is a program that needs <b>specific, predictable instructions</b> to do its job. It cannot guess your intentions. You can't just give it a file with a <i>&lt;h1&gt;</i> tag and expect it to know what kind of document it is, what language it's in, or how to render it properly.</p>
+
+            <h4>Step 2: The Core Problem</h4>
+            <p>We need a way to give the browser essential "setup information" <em>before</em> it starts rendering visible content (like paragraphs and images). This setup information answers critical questions:</p>
+            <ul>
+                <li><b>"What version of HTML am I reading?"</b> (So it knows which rules to follow)</li>
+                <li><b>"What character encoding should I use?"</b> (So special characters display correctly)</li>
+                <li><b>"What should the title of the browser tab be?"</b></li>
+                <li><b>"How should this page behave on a mobile device vs. a desktop?"</b></li>
+            </ul>
+            <p>Just writing <i>&lt;p&gt;Hello&lt;/p&gt;</i> doesn't answer these questions.</p>
+
+            <h4>Step 3: The Logical Solution - The Boilerplate</h4>
+            <p>The solution is a standard starting template — a <b>boilerplate</b>. You copy it into every HTML file and fill in the blanks. It's like a blueprint before adding walls (<i>&lt;h1&gt;</i>) and windows (<i>&lt;img&gt;</i>)
+        </td>
+
+        <td align="right">
+            <img src="boiler.png" alt="ss of file path" width="600">
+        </td>
+    </tr>
+  </table>
+  <br />
+
+
+  <table width="90%" align="center" bgcolor="honeydew">
+    <tr>
+        <td>
+            <h3>The Anatomy of the HTML Boilerplate</h3>
+            <pre><i>&lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;</i></pre>
+            </td>
+    </tr>
+  </table>
+  <br />
+
+
+  <table width="90%" align="center" bgcolor="mistyrose">
+    <tr>
+        <td>
+            <h3>Breakdown:</h3>
+            <ul>
+                <li><b>&lt;!DOCTYPE html&gt;</b>: Tells browser to use modern HTML5 standards (prevents quirks mode).</li>
+                <li><b>&lt;html lang="en"&gt;</b>: Root element; declares page language for accessibility and SEO.</li>
+                <li><b>&lt;head&gt; ... &lt;/head&gt;</b>: Container for metadata, not visible content.</li>
+                <li><b>&lt;meta charset="UTF-8"&gt;</b>: Ensures proper character encoding for all symbols.</li>
+                <li><b>&lt;meta name="viewport" ... &gt;</b>: Makes the page mobile-friendly (responsive).</li>
+                <li><b>&lt;title&gt; ... &lt;/title&gt;</b>: Sets browser tab title for usability and SEO.</li>
+                <li><b>&lt;body&gt; ... &lt;/body&gt;</b>: Container for all visible page content.</li>
+            </ul>
+
+            <h4>Browsers Are Forgiving</h4>
+            <p>Even without a boilerplate, browsers will attempt to guess missing tags:</p>
+            <ol>
+                <li>Missing <i>&lt;!DOCTYPE html&gt;</i>: Browser enters quirks mode.</li>
+                <li>Missing <i>&lt;html&gt;</i> or <i>&lt;body&gt;</i>: Browser implicitly generates them.</li>
+                <li>Missing <i>&lt;meta charset="UTF-8"&gt;</i>: Browser guesses encoding (might break special characters).</li>
+                <li>Missing <i>&lt;title&gt;</i>: Browser uses filename as default tab title.</li>
+            </ol>
+        </td>
+    </tr>
+  </table>
+  <br />
+
+
+  <table width="90%" align="center" bgcolor="lightcyan">
+    <tr>
+        <td>
+            <h3>Multipage Website</h3>
+            <p>Websites are rarely a single page. Multi-page websites separate information into different topic pages (e.g., <i>home.html</i>, <i>about.html</i>, <i>contact.html</i>).</p>
+            <p>We need a consistent structure and a navigation system using <i>&lt;a&gt;</i> tags to link pages.</p>
+
+            <h4>1. The &lt;div&gt; (The Generic Box)</h4>
+            <p>Group multiple elements (<i>&lt;h1&gt;</i>, <i>&lt;p&gt;</i>, <i>&lt;img&gt;</i>) into one conceptual unit.</p>
+            
+            <h4>2. class and id (Labels for the Box)</h4>
+            <p>Use <b>id</b> for unique elements and <b>class</b> for reusable groups:</p>
+            
+
+            <h4>3. The &lt;span&gt; (Inline Highlighter)</h4>
+            <p>Use <i>&lt;span&gt;</i> to style content inline without creating a new block:</p>
+            
+            <h3>Semantic Containers</h3>
+            <ul>
+                <li><b>&lt;header&gt;</b>: Top section with logo, nav, main heading.</li>
+                <li><b>&lt;footer&gt;</b>: Bottom section with copyright, contact, secondary links.</li>
+                <li><b>&lt;main&gt;</b>: Main unique content. Only one <i>&lt;main&gt;</i> per page.</li>
+            </ul>
+
+         </td>
+    </tr>
+  </table>
+  <br />
+
+
+
+
+
+</main>
+
+
+
+
+
+<iframe src="" allowfullscreen></iframe>
+
+<footer>
+  <table width="100%" bgcolor="pink">
+    <tr >
+        <td><a href="index.html"><font color="blue">HOME PAGE</font></a></td>
+        <td><a href="page1.html"><font color="blue">LECTURE1</font></a></td>
+        <td><a href="page2.html"><font color="blue">LECTURE2</font></a></td>
+        <td><a href="page3.html"><font color="blue">LECTURE3</font></a></td>
+        <td><a href="page4.html"><font color="blue">LECTURE4</font></a></td>
+        <td><a href="page5.html"><font color="blue">LECTURE5</font></a></td>
+        <td><a href="page6.html"><font color="blue">LECTURE6</font></a></td>
+    </tr>
+  </table>
+  <br />
+  
+  <table width="100%" bgcolor="lightblue">
+    <tr>
+      <td align="center">
+        <p>&copy; 2025 Web Development Course</p>
+      </td>
+    </tr>
+  </table>
+  <br />
+</footer>
+
+
+
+</body>
+</html>
