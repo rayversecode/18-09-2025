@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML basics 5</title>
+</head>
+<body>
+
+<header>
+    <table width="90%" align="center" bgcolor="lightblue">
+        <td>
+            <center><h1>WEB DEVELOPMENT COURSE</h1>
+            <p>by Coder Army</p></center>
+        </td>
+    </table>
+    <hr />
+
+    <br />
+    <hr />
+    <table width="90%" align="center" bgcolor="pink">
+        <td>
+            <center><h2>HTML MEDIA</h2></center>
+        </td>
+    </table>
+    <br />
+</header>
+
+<main>
+  <table width="90%" align="center" bgcolor="lavender">
+    <tr>
+        <td>
+            <h3>First Principle: The Web is More Than Text and Images</h3>
+            <p>The fundamental truth is that a webpage should be able to deliver any kind of content, not just static text and pictures. For years, this was a major problem. To play a video or audio file, browsers had to rely on third-party plugins like Adobe Flash, QuickTime, or Silverlight. This was inefficient, insecure, and inconsistent across different computers.</p>
+            <hr />
+            <h3>The Core Problem</h3>
+            <p>How can we embed video and audio into a webpage in a standardized, native, and plugin-free way? We need a universal system that works on every modern browser, from a desktop PC to a mobile phone, without requiring the user to install anything extra.</p>
+            <p><b>The Logical Solution:</b> The HTML5 <i>&lt;video&gt;</i> and <i>&lt;audio&gt;</i> Tags.</p>
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="mistyrose">
+    <tr>
+        <td>
+            <h3>Part 1: The Basics - Getting a Video on the Page</h3>
+            <p>The star of the show is the <i>&lt;video&gt;</i> tag. At its simplest, it just needs to know the source of the video file.</p>
+            
+            <p><b>The Problem We Immediately Face:</b> If you put this on a page, you'll just see the first frame of the video as a static image. You can't play it, pause it, or change the volume. It's not a video player; it's just a video frame.</p>
+            <p><b>The Solution:</b> We need to add player controls. The browser has a beautiful set of default controls built-in, and we can turn them on with a simple attribute.</p>
+            <h3>The <i>controls</i> Attribute: The Magic Switch</h3>
+            <p>The <i>controls</i> attribute is a boolean attribute. You don't need to set it to a value; its mere presence turns the feature on.</p>
+            
+            <p><b>Result:</b> You now have a fully functional video player on your page, complete with a play/pause button, a timeline scrubber, volume controls, and a fullscreen option. This is the simplest, most effective way to embed a video.</p>
+        </td>
+
+        <td align="right">
+            <img src="html14.png" alt="ss of file path" width="400">
+            <img src="html15.png" alt="ss of file path" width="400">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="lightcyan">
+    <tr>
+        <td>
+            <h3>Part 2: Intermediate - Gaining More Control with Attributes</h3>
+            <p>Now that we have a player, how do we control its behavior and appearance? We use attributes.</p>
+            <ul>
+                <li><b>width and height:</b> Just like with an <i>&lt;img&gt;</i> tag, you can set the dimensions of the player.</li>
+                <li><b>autoplay:</b> This attribute will make the video start playing as soon as the page loads. <b>CRITICAL CAVEAT:</b> Modern browsers will block autoplay with sound. To make autoplay work, you almost always have to add the <i>muted</i> attribute as well.</li>
+                <li><b>loop:</b> Makes the video automatically restart from the beginning when it finishes. Great for background videos.</li>
+                <li><b>poster:</b> This is a fantastic feature for user experience. It specifies an image to display before the video is played, just like a YouTube thumbnail.</li>
+            </ul>
+            <p>Example using width, height, and poster:</p>
+            <p>Example using autoplay and muted:</p>
+            </td>
+
+        <td align="right">
+            <img src="html16.png" alt="ss of file path" width="400">
+            <img src="html17.png" alt="ss of file path" width="400">
+            <img src="html18.png" alt="ss of file path" width="400">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="lightsteelblue">
+    <tr>
+        <td>
+            <h3>Part 3: The <i>&lt;audio&gt;</i> Tag</h3>
+            <p>The good news is that the <i>&lt;audio&gt;</i> tag works almost identically to the <i>&lt;video&gt;</i> tag, just without the visual component.</p>
+            <p><b>The Problem:</b> How do we embed a sound file (like a song or a podcast) with player controls?</p>
+            <p><b>The Solution:</b> Use the <i>&lt;audio&gt;</i> tag with the <i>controls</i> attribute.</p>
+            
+            <p><b>Result:</b> A clean audio player with play/pause, a timeline, and volume controls. It uses the same attributes like <i>autoplay</i>, <i>loop</i>, and <i>muted</i>.</p>
+        </td>
+        <td align="right">
+            <img src="html19.png" alt="ss of file path" width="400">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="wheat">
+    <tr>
+        <td>
+            <h3>Part 4: Advanced & Professional - Solving Real-World Problems</h3>
+            <p>This is where we move from just making a player work to making it work for everyone, on every browser.</p>
+            <hr>
+            <h4>Problem #1: Not all browsers support the same video formats.</h4>
+            <p>Chrome might prefer the modern .webm format, while Safari on an iPhone might only support .mp4. If you only provide one src, some of your users won't be able to see your video.</p>
+            <p><b>The Solution: The <i>&lt;source&gt;</i> Element</b></p>
+            <p>Instead of putting the <i>src</i> on the <i>&lt;video&gt;</i> tag itself, you can provide multiple formats inside the tag using the <i>&lt;source&gt;</i> element. The browser will go down the list and play the first one it supports.</p>
+            
+            <p>This is the robust, professional way to embed media. The <i>type</i> attribute tells the browser what kind of file it is so it doesn't have to waste time downloading a file it can't play.</p>
+        </td>
+        <td align="right">
+            <img src="html20.png" alt="ss of file path" width="400">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="lightpink">
+    <tr>
+        <td>
+            <h4>Problem #2: Your video is not accessible.</h4>
+            <p>Users who are deaf or hard of hearing can't understand your video. Users in a noisy environment (or a quiet office) can't listen to the audio. Users speaking another language won't understand it.</p>
+            <p><b>The Solution: The <i>&lt;track&gt;</i> Element</b></p>
+            <p>The <i>&lt;track&gt;</i> element allows you to add timed text tracks, such as subtitles or captions. It's a self-closing tag that points to a special text file, usually in WebVTT (.vtt) format.</p>
+            
+            <p><b>Breakdown:</b></p>
+            <ul>
+                <li><b>src:</b> Path to the .vtt file.</li>
+                <li><b>kind:</b> The type of track. The most common are: <i>captions</i>, <i>subtitles</i>, <i>descriptions</i>.</li>
+                <li><b>srclang:</b> The language of the track file (e.g., "en" for English).</li>
+                <li><b>label:</b> The name that appears in the video player's captions menu.</li>
+            </ul>
+            <p>This makes your video accessible to a much wider audience and is a critical part of professional web development.</p>
+        </td>
+        <td align="right">
+            <img src="html21.png" alt="ss of file path" width="600">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="honeydew">
+    <tr>
+        <td>
+            <h3>The Robust & Professional Method (<i>&lt;source&gt;</i>)</h3>
+            </pre>
+            <p>This method's primary purpose is to ensure maximum browser compatibility.</p>
+            <p><b>How It Works (The Logic):</b> This code gives the browser a list of options. The browser will read this list from top to bottom and play the very first video format it understands.</p>
+            <ol>
+                <li>The browser first sees <i>&lt;source src="movie.mp4" ...&gt;</i>. It asks itself, "Can I play MP4 video?" If YES, it loads movie.mp4, plays it, and completely ignores the rest of the <i>&lt;source&gt;</i> tags.</li>
+                <li>If NO, it moves to the next option: <i>&lt;source src="movie.ogg" ...&gt;</i> and asks "Can I play Ogg video?". If YES, it plays it.</li>
+                <li>If NO, it has no other options and displays the fallback text.</li>
+            </ol>
+            <p><b>Pros:</b> The most reliable way to embed video for the largest audience.</p>
+            <p><b>Cons:</b> Requires you to have your video file encoded in multiple formats.</p>
+        </td>
+        <td align="right">
+            <img src="html22.png" alt="ss of file path" width="400">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="aliceblue">
+    <tr>
+        <td>
+            <h3>The Simple & Direct Method (<i>src</i> attribute)</h3>
+            
+            <p>This method's primary purpose is simplicity and directness.</p>
+            <p><b>How It Works (The Logic):</b> This code gives the browser a single, direct command: "Play the file a.mp4."</p>
+            <ul>
+                <li>The browser sees the <i>src</i> attribute and asks itself, "Can I play MP4 video?"</li>
+                <li>If the answer is YES, it loads and plays it.</li>
+                <li>If the answer is NO, the video simply will not play. The user will likely see an error message or a black box.</li>
+            </ul>
+            <p><b>Pros:</b> Very simple to write and you only need one video file.</p>
+            <p><b>Cons:</b> It's an "all or nothing" approach. If the user's browser doesn't support .mp4, the video fails completely.</p>
+        </td>
+        <td align="right">
+            <img src="html23.png" alt="ss of file path" width="400">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="beige">
+    <tr>
+        <td>
+            <h3>Comparison Table</h3>
+            <table border="1" width="100%">
+                <tr>
+                    <th>Feature</th>
+                    <th>Example 1 (<i>&lt;source&gt;</i> Method)</th>
+                    <th>Example 2 (<i>src</i> Method)</th>
+                </tr>
+                <tr>
+                    <td>Browser Compatibility</td>
+                    <td><b>Excellent.</b> Provides multiple formats as fallbacks.</td>
+                    <td>Good, but not guaranteed. Relies on a single format.</td>
+                </tr>
+                <tr>
+                    <td>Flexibility</td>
+                    <td>High. You can list many different formats.</td>
+                    <td>Low. Only one format is possible.</td>
+                </tr>
+                <tr>
+                    <td>Simplicity</td>
+                    <td>More complex. Requires multiple lines and files.</td>
+                    <td><b>Very simple.</b> Requires only one line.</td>
+                </tr>
+                <tr>
+                    <td>Best Use Case</td>
+                    <td><b>Public-facing websites</b> where you need to support all users.</td>
+                    <td><b>Quick tests, internal projects,</b> or when you are 100% certain your target audience supports your one format.</td>
+                </tr>
+            </table>
+            <br>
+            <h3>Conclusion: Which One Should You Use?</h3>
+            <p>For any serious, public website, <b>you should always prefer the first method using the <i>&lt;source&gt;</i> element.</b> It is the industry best practice. However, since .mp4 has become so universally supported, many developers now take the shortcut and use the second, simpler method for convenience, but they are accepting the small risk that it might not work for every single user.</p>
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="lightsteelblue">
+    <tr>
+        <td>
+            <h3>The Two Ways to Create the Copyright Symbol ©</h3>
+            <p>You can use either the <i>entity name</i> or the <i>entity number</i>. Both produce the exact same result. The entity name is generally easier to remember.</p>
+            <h4>1. Using the Entity Name (Recommended)</h4>
+            <p>This is the most common and readable method. Code: <i>&amp;copy;</i></p>
+            
+            <h4>2. Using the Entity Number</h4>
+            <p>This method uses the character's numerical code. Code: <i>&amp;#169;</i></p>
+            
+        </td>
+        <td align="right">
+            <img src="html24.png" alt="ss of file path" width="600">
+             <img src="html25.png" alt="ss of file path" width="600">
+        </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="90%" align="center" bgcolor="snow">
+    <tr>
+        <td>
+            <h3>Other Common Symbol Entities You Should Know</h3>
+            <p>The same principle applies to other common symbols.</p>
+            <table border="1" width="100%">
+                <tr>
+                    <th>Symbol</th>
+                    <th>Description</th>
+                    <th>Entity Name</th>
+                    <th>Entity Number</th>
+                </tr>
+                <tr>
+                    <td>©</td>
+                    <td>Copyright</td>
+                    <td><i>&amp;copy;</i></td>
+                    <td><i>&amp;#169;</i></td>
+                </tr>
+                <tr>
+                    <td>®</td>
+                    <td>Registered Trademark</td>
+                    <td><i>&amp;reg;</i></td>
+                    <td><i>&amp;#174;</i></td>
+                </tr>
+                <tr>
+                    <td>™</td>
+                    <td>Trademark</td>
+                    <td><i>&amp;trade;</i></td>
+                    <td><i>&amp;#8482;</i></td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>Less-than</td>
+                    <td><i>&amp;lt;</i></td>
+                    <td><i>&amp;#60;</i></td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>Greater-than</td>
+                    <td><i>&amp;gt;</i></td>
+                    <td><i>&amp;#62;</i></td>
+                </tr>
+                 <tr>
+                    <td>&amp;</td>
+                    <td>Ampersand</td>
+                    <td><i>&amp;amp;</i></td>
+                    <td><i>&amp;#38;</i></td>
+                </tr>
+                 <tr>
+                    <td>"</td>
+                    <td>Double Quote</td>
+                    <td><i>&amp;quot;</i></td>
+                    <td><i>&amp;#34;</i></td>
+                </tr>
+                 <tr>
+                    <td>€</td>
+                    <td>Euro Sign</td>
+                    <td><i>&amp;euro;</i></td>
+                    <td><i>&amp;#8364;</i></td>
+                </tr>
+            </table>
+            <br>
+            <h4>Why do we need entities for <i>&lt;</i> and <i>&gt;</i>?</h4>
+            <p>Because the browser would interpret <i>&lt;</i> and <i>&gt;</i> as the start or end of an HTML tag. If you want to literally display the text <i>&lt;p&gt;</i> on your page, you must write <i>&amp;lt;p&amp;gt;</i>.</p>
+        </td>
+    </tr>
+  </table>
+  <br />
+</main>
+
+
+
+
+
+
+<iframe src="" allowfullscreen></iframe>
+
+<footer>
+   <table width="100%" bgcolor="pink">
+    <table width="100%" bgcolor="pink">
+    <tr >
+        <td><a href="index.html"><font color="blue">HOME PAGE</font></a></td>
+        <td><a href="page1.html"><font color="blue">LECTURE1</font></a></td>
+        <td><a href="page2.html"><font color="blue">LECTURE2</font></a></td>
+        <td><a href="page3.html"><font color="blue">LECTURE3</font></a></td>
+        <td><a href="page4.html"><font color="blue">LECTURE4</font></a></td>
+        <td><a href="page5.html"><font color="blue">LECTURE5</font></a></td>
+        <td><a href="page6.html"><font color="blue">LECTURE6</font></a></td>
+    </tr>
+  </table>
+  <br />
+  
+  <table width="100%" bgcolor="lightblue">
+    <tr>
+      <td align="center">
+        <p>&copy; 2025 Web Development Course</p>
+      </td>
+    </tr>
+  </table>
+  <br />
+</footer>
+
+
+
+</body>
+</html>
